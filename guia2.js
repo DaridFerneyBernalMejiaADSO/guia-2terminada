@@ -1,31 +1,22 @@
 addEventListener("DOMContentLoaded", ()=>{
-// # Desarrollar un diagrama que lea 3 valores diferentes
-let valor1= Number(prompt("ingrese el valor 1="))
-let valor2= Number(prompt("ingrese el valor 2="))
-let valor3= Number(prompt("ingrese el valor 3="))
-if( valor1<valor2 && valor1<valor3){
-    console.log(`el valor 1 es menor`,valor1)
-}
-else if (valor2<valor3 && valor2<valor1){
-    console.log(`el valor 2 es menor`,valor2)
-}
-else if ( valor3<valor2 && valor3<valor1){
-    console.log(`el valor 3 es menor `,valor3)
-}
-if (valor3<valor2 && valor3<valor1){
-    console.log(`el valor 1 es mayor`,valor1)
-}
-else if(valor2>valor3 && valor2>valor1){
-    console.log(`valor 2 es mayor`,valor2)
-}
-else if (valor3>valor2 && valor3>valor1){
-    console.log(`el valor 3 es mayor`,valor3)
-}
-if(valor3==valor2 && valor3 == valor1){
-    console.log(`el valor 1 igual 2`,valor1,valor2)
-}
-else if(valor2 == valor1){
-    console.log(`el valor 2 es igual al valor 1`,valor2,valor3)
+    // Cálculo de áreas - Elige una figura geométrica:" Triángulo y Círculo
+    let fig=prompt(`¿a cual figura le quiere calcular el area? triangulo(T), circulo(C)`)
+    if (fig==`T`){
+        let base=Number(prompt(`ingrese la base`))
+        let altura=Number(prompt(`ingrese la altura`))
+        let resul=(base*altura)/2
+        console.log("el area del triangulo es ",resul)
+    }
+    if (fig==`C`){
+        let rad=Number(prompt(`ingrese el valor del radio`))
+        let resul=Math.PI*rad**2
+        console.log("el area del circulo es",resul)
 
-}
+    }
+    else{
+        console.log(`lo ingresado no es valido`)
+    }
+
+
+ 
 })
