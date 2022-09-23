@@ -1,16 +1,24 @@
 addEventListener("DOMContentLoaded", ()=>{
-    //#calcular todos los pagos hechos en un restaurante 
-   let con=Number(prompt("ingrese un total de consumo"))
-    if (con > 130000){
-       let des= con*(15/100)
-       let dtotal= con - des
-       console.log(`total a pagar con descuento `,dtotal)
-    }
-    else{
-        console.log(`no tienes descuento, tu debes que pagar:${con}`)
-    }
-
+    // En cierta empresa se les paga a sus trabajadores de la siguiente forma: si el empleado es de planta,
+    // la hora trabajada se le paga a $20000, si el empleado es administrativo, la hora trabajada se le paga
+    // a $10000. Para calcular su pago es necesario conocer el total de horas trabajadas.
+ let tra=prompt(`ingrese en que trabaja planta (P) o administrador (A)`)
+ .toUpperCase()
+ if (tra==`P`){
+    let h=Number(prompt(`cantidad de horas trabajas al dia?`))
+    let sh=20000
+    let suel=h*sh
+    console.log(`pago de trabajadores de planta segun las horas`,suel)
+ }
+ else if (tra==`A`){
+    let h=Number(prompt(`cantidad de horas trabajas al dia?`))
+    let sho=10000
+    let sue= h*sho
+    console.log(`pago administradores administradores segun la horas`,sue)
     
+ }
+else {
+    console.log(`invalido`)
+}
 })
-//Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
-//$130.000 el descuento será del 15%, de lo contrario no hay descuento.
+
